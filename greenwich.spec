@@ -10,7 +10,6 @@ Patch0:		greenwich-0.8.0-no-install-schema.patch.bz2
 URL:		http://jodrell.net/projects/greenwich/
 License:	GPL
 Group:		Networking/Other
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	ImageMagick
 # may be used but not crucial (according to author)
 #Requires:	perl-IP-Country

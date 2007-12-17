@@ -13,7 +13,7 @@ Group:		Networking/Other
 BuildRequires:	ImageMagick
 # may be used but not crucial (according to author)
 #Requires:	perl-IP-Country
-Prereq:		GConf2 >= 2.3.3
+Requires(post,preun):	GConf2 >= 2.3.3
 BuildArch:	noarch
 
 %description

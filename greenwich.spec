@@ -90,6 +90,7 @@ fi
 %{_sysconfdir}/gconf/schemas/*.schemas
 %{_bindir}/*
 %{_libdir}/%name
+/usr/lib/greenwich/WhoisMap.pm
 %{_datadir}/%name
 %{_datadir}/applications/*
 %{_datadir}/pixmaps/*

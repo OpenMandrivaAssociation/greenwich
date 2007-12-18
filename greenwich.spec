@@ -89,8 +89,7 @@ fi
 %doc ChangeLog LICENSE README
 %{_sysconfdir}/gconf/schemas/*.schemas
 %{_bindir}/*
-%{_libdir}/%name
-/usr/lib/greenwich/WhoisMap.pm
+/usr/lib/greenwich
 %{_datadir}/%name
 %{_datadir}/applications/*
 %{_datadir}/pixmaps/*

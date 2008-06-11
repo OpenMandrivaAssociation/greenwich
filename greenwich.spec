@@ -69,18 +69,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 %update_menus
-export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
-for SCHEMA in greenwich; do
-        gconftool-2 --makefile-install-rule %{_sysconfdir}/gconf/schemas/${SCHEMA}.schemas > /dev/null
-done
+%post_install_gconf_schemas greenwich
 
 %preun
-if [ "$1" -eq 0 ]; then
-  export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
-  for SCHEMA in greenwich; do
-    gconftool-2 --makefile-uninstall-rule %{_sysconfdir}/gconf/schemas/${SCHEMA}.schemas > /dev/null
-  done
-fi
+%preun_uninstall_gconf_schemas "$1"
 
 %postun
 %clean_menus

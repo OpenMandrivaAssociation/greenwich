@@ -67,15 +67,19 @@ install -m 644 -D share/greenwich.schema $RPM_BUILD_ROOT%{_sysconfdir}/gconf/sch
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%if %mdkversion < 200900
 %post
 %update_menus
 %post_install_gconf_schemas greenwich
+%endif
 
 %preun
 %preun_uninstall_gconf_schemas "$1"
 
+%if %mdkversion < 200900
 %postun
 %clean_menus
+%endif
 
 %files -f %name.lang
 %defattr(-,root,root)

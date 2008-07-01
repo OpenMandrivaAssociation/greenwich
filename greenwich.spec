@@ -1,19 +1,18 @@
-%define version	0.8.1
+%define version	0.8.2
 %define release  %mkrel 1
 
 Name: 	 	greenwich
 Summary: 	A graphical whois client
 Version: 	%{version}
 Release: 	%{release}
-Source:		http://jodrell.net/files/greenwich/%{name}-%{version}.tar.bz2
-Patch0:		greenwich-0.8.0-no-install-schema.patch.bz2
+Source:		http://jodrell.net/files/greenwich/%{name}-%{version}.tar.gz
 URL:		http://jodrell.net/projects/greenwich/
-License:	GPL
+License:	GPLv2+
 Group:		Networking/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	ImageMagick
 # may be used but not crucial (according to author)
-#Requires:	perl-IP-Country
+Suggests:	perl-IP-Country
 Requires(post,preun):	GConf2 >= 2.3.3
 BuildArch:	noarch
 
@@ -27,7 +26,6 @@ second-level ccTLDs and whois servers run by private domain registries
 
 %prep
 %setup -q
-%patch0 -p1 -b .no-install-schemas
 
 # fix file permissions
 find -type f -perm +0111 -print0 | xargs -0 -r file | grep -v executable | cut -d: -f1 | xargs -r chmod -x
@@ -89,9 +87,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/lib/greenwich
 %{_datadir}/%name
 %{_datadir}/applications/*
-%{_datadir}/pixmaps/*
+#%{_datadir}/pixmaps/*
 %{_mandir}/man1/*
-%{_datadir}/applications/mandriva-%name.desktop
+%{_iconsdir}/*/*/apps/%name.png
 %{_liconsdir}/%name.png
 %{_iconsdir}/%name.png
 %{_miconsdir}/%name.png

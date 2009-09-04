@@ -1,5 +1,5 @@
 %define version	0.8.2
-%define release  %mkrel 1
+%define release  %mkrel 2
 
 Name: 	 	greenwich
 Summary: 	A graphical whois client

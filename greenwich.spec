@@ -94,3 +94,69 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/%name.png
 %{_miconsdir}/%name.png
 
+
+
+%changelog
+* Fri Dec 10 2010 Oden Eriksson <oeriksson@mandriva.com> 0.8.2-3mdv2011.0
++ Revision: 619254
+- the mass rebuild of 2010.0 packages
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 0.8.2-2mdv2010.0
++ Revision: 429322
+- rebuild
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - lowercase ImageMagick
+
+* Tue Jul 01 2008 Austin Acton <austin@mandriva.org> 0.8.2-1mdv2009.0
++ Revision: 230497
+- new version
+- add icons
+- fix license
+- drop patch
+- suggests perl IP
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+    - use %%post_install_gconf_schemas/%%preun_uninstall_gconf_schemas
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Wed Dec 19 2007 Thierry Vignaud <tv@mandriva.org> 0.8.1-1mdv2008.1
++ Revision: 133083
+- further fix file list for x86_64
+- fix file list on x86_64
+- auto-convert XDG menu entry
+- fix prereq on gconf2
+- kill re-definition of %%buildroot on Pixel's request
+- use %%mkrel
+- import greenwich
+
+
+* Wed Aug 24 2005 Austin Acton <austin@mandriva.org> 0.8.1-1mdk
+- 0.8.1
+- source URL
+
+* Mon Oct 26 2004 Austin Acton <austin@mandrake.org> 0.8.0-1mdk
+- 0.8.0
+
+* Wed Jun 30 2004 Austin Acton <austin@mandrake.org> 0.7.1-1mdk
+- 0.7.1
+- add language files
+- new menu
+
+* Sun Dec 14 2003 Abel Cheung <deaddog@deaddog.org> 0.6.2-1mdk
+- New version
+- Convert icon with ImageMagick
+- Use description from original spec
+- TODO: mark localized files
+
+* Sat Jun 7 2003 Austin Acton <aacton@yorku.ca> 0.5.2-2mdk
+- fix requires perl(the) (Michael Reinsch)
+
+* Thu Jun 5 2003 Austin Acton <aacton@yorku.ca> 0.5.2-1mdk
+- 0.5.2
+
+* Tue Apr 1 2003 Austin Acton <aacton@yorku.ca> 0.5.1-1mdk
+- initial package

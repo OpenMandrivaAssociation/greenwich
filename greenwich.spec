@@ -6,7 +6,7 @@ Summary: 	A graphical whois client
 Version: 	%{version}
 Release: 	%{release}
 Source:		http://jodrell.net/files/greenwich/%{name}-%{version}.tar.gz
-URL:		http://jodrell.net/projects/greenwich/
+URL:		https://jodrell.net/projects/greenwich/
 License:	GPLv2+
 Group:		Networking/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot

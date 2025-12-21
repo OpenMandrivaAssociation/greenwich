@@ -10,6 +10,11 @@ URL:		https://jodrell.net/projects/greenwich/
 License:	GPLv2+
 Group:		Networking/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	imagemagick
 # may be used but not crucial (according to author)
 Suggests:	perl-IP-Country
